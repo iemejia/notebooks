@@ -1,0 +1,33 @@
+{
+  "name": "notebooks",
+  "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
+  "hostRequirements": {
+    "gpu": "optional",
+    "memory": "32gb"
+  },
+  "forwardPorts": [
+    6006,
+    8888
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.minimap.enabled" : false,
+        "workbench.editorLargeFileConfirmation": 1024
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  },
+  "features": {
+    "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+      "cudaVersion": "11.8",
+      "installCudnn": true
+    }
+  },
+  "onCreateCommand": "pip3 install --user -r requirements.txt",
+  "updateContentCommand": "python -m ipykernel install --user --name  notebooks --display-name 'Python 3 (notebooks)'"
+  // "postCreateCommand": "jupyter lab --notebook-dir=/workspaces/notebooks --ip='0.0.0.0' --port=8888 --no-browser"
+}
