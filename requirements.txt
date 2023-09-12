@@ -201,7 +201,7 @@ lazr.uri==1.0.6
 lazy_loader==0.3
 libclang==16.0.6
 librosa==0.10.1
-lightgbm==4.0.0
+lightgbm==4.1.0
 linkify-it-py==2.0.2
 lit==16.0.6
 llvmlite==0.39.1
