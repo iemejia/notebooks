@@ -155,7 +155,7 @@ humanize==4.7.0
 hyperopt==0.2.7
 idna==3.4
 imageio==2.31.3
-imageio-ffmpeg==0.4.8
+imageio-ffmpeg==0.4.9
 imagesize==1.4.1
 imbalanced-learn==0.10.1
 imgaug==0.4.0
